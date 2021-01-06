@@ -1,4 +1,4 @@
-package dev.learn.handsonscala.excercises.ch03
+package dev.learn.handsonscala.excercises.chapter03
 
 import dev.learn.handsonscala.excercises.common.Exercise
 
@@ -14,18 +14,5 @@ object ExerciseFlexibleFizzBuzz extends Exercise {
           else i.toString
         )
       )
-  }
-
-  override def run(): Unit = {
-    flexibleFizzBuzz(s => {} /* do nothing @ var i = 0 */ )
-    flexibleFizzBuzz(s => println(s))
-
-    var i = 0
-    val output = new Array[String](100)
-    flexibleFizzBuzz { s =>
-      output(i) = s
-      i += 1
-    }
-    println(output.mkString("Array(", ", ", ")"))
   }
 }
